@@ -1,0 +1,28 @@
+<DOCTYPE html>
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Calculadora</title>
+	</head>
+	<body>
+
+		<form action="">
+			<input type="text" id="num1">
+			<input type="text" id="num2">
+			<input type="button" value="Sumar" onclick="alert( suma(10,50) );">
+		</form>
+
+		<script type="text/javascript">
+
+			var suma = function(num1, num2){
+				var num1 = parseFloat(document.getElementById("num1").value);
+				var num2 = parseFloat(document.getElementById("num2").value);
+
+				var res = num1 + num2;
+				return res;
+			}
+
+		</script>
+	</body>
+	</html>

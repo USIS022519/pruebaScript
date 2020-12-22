@@ -1,0 +1,86 @@
+<DOCTYPE html>
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Scope javascript</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+			// Scope global: podemos acceder a ellas desde cualquier parte del codigo.
+			// Scope local: variables creadas dentro de una funcion, solo pueden ser accedidas desde su funcion o una funcion anidada.
+
+			/*var variableGlobal = "Esta es global";
+
+			var miFuncion = function(){
+				alert(variableGlobal);
+				variableGlobal = "Esta es global, modificada";
+				alert(variableGlobal);
+			}
+			miFuncion();
+			//alert(variableGlobal);
+			*/
+
+			/*var variableGlobal = "Esta es global";
+
+			// Si sacamos el alert que esta dentro de la funcion nos dara error.
+
+			var miFuncion = function(){
+				var variableLocal = "Esta es local";
+				alert(variableLocal);
+			}
+			// Si le quitamos la palavra reservada var se convertira en variable global
+			miFuncion(); */
+
+			// funcion anidada local
+
+			/*var miFuncion = function(){
+				var variableLocal = "Esta es local";
+
+				var FuncionLocal = function(){
+					var variableLocal = "Esta es variable local, dentro de una funcion local";
+					alert(variableLocal);
+				}
+				FuncionLocal();
+				
+			}
+			miFuncion();*/
+
+			// Recordar que desde dentro de una funcion si se puede buscar variables, pero de fuera hacia dentro como en este caso no se puede.
+			/*var miFuncion = function(){
+				//var variableLocal = "Esta es local";
+
+				alert(variableLocal);
+
+				var FuncionLocal = function(){
+					var variableLocal = "Esta es variable local, dentro de una funcion local";
+					//alert(variableLocal);
+				}
+				FuncionLocal();
+				
+			}
+			miFuncion(); */
+
+			// Como podemos proteger nuestro codigo. (function(){Aqui hiria el codigio}())
+
+			(function(){
+				var miFuncion = function(){
+				//var variableLocal = "Esta es local";
+
+				alert(variableLocal);
+
+				var FuncionLocal = function(){
+					var variableLocal = "Esta es variable local, dentro de una funcion local";
+					//alert(variableLocal);
+				}
+				FuncionLocal();
+				
+			}
+			miFuncion();
+			}())	
+
+		</script>
+	
+	</body>
+	</html>
